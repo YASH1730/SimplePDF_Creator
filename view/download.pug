@@ -1,0 +1,12 @@
+extends templete.pug 
+
+block style
+    style 
+        include ../public/css/download.css
+    body 
+        div.container
+            h1(class =  "animate__animated animate__rubberBand") Thanks You &#128522;
+            p Click on the download button to get the PDF.
+            a(href="/download/"+pdfname)  
+                button(class =  "animate__animated animate__heartBeat") Download
+    

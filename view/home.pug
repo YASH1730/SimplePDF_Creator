@@ -1,0 +1,19 @@
+extends templete.pug 
+
+block style
+    style 
+        include ../public/css/home.css
+block content
+    body 
+        h1(id = "heading" class =  "animate__animated animate__rubberBand") Welcome to the PDF Generator
+        h5 #{msg}
+        form(action="/pdf_create", method="post")
+            input( class = "item" name = "username" type="text" placeholder = "Enter your name")
+            br
+            textarea(class = "item" placeholder="Content"  name="content",cols="30", rows="5")
+            br
+            input( class = "item" name = "filename" type="text" placeholder = "Enter the coustom name for your PDF")
+            br
+            button(id= "btn" type="submit") Generate PDF
+
+
